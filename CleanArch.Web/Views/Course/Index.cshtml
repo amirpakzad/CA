@@ -1,0 +1,19 @@
+﻿ @model CleanArch.Application.ViewModel.CourseViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="container body-content">
+    <div class="row course-content">
+        @foreach (var item in Model.Courses)
+        {
+            <div class="col-4">
+                <div class="course-image-container">
+                    <a href="course/showcourse/@item.ID"><div class="course-image" style="background-image:url(@item.ImageUrl)"></div></a>
+                </div>
+                <span class="col-12">@item.Name</span>
+            </div>
+        }
+    </div>
+</div>
+
